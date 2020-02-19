@@ -9,24 +9,45 @@
     <div id="sk">
       <h1>Calculator</h1>
       <form>
-        <label for="num1">Number1</label>
+        Number1:
         <input type="number" id="num1" name="num1" />
         <br />
         <br />
-        <label for="num2">Number2</label>
+        Number2:
         <input type="number" id="num2" name="num2" />
         <br />
         <br />
-        <select>
-          <option></option>
-          <option>Add</option>
-          <option>Substract</option>
-          <option>Divide</option>
-          <option>Muliply</option>
+        <select id="operator">
+          <option value="+">Add</option>
+          <option value="-">Substract</option>
+          <option value="/">Divide</option>
+          <option value="*">Muliply</option>
         </select>
-        <button type="submit">Submit</button>
+        <button type='button' id='aa' onclick="sub()">Submit</button>
         <button type="reset">Reset</button>
+        <br />
+        <br />
+        <label for="result">Result</label>
+        <input type="text" id="result" />
       </form>
     </div>
+    <!-- <script src="./task1.js"></script> -->
+    <script>
+      function sub() {
+        var n1 = parseInt(document.getElementById("num1").value);
+        var n2 = parseInt(document.getElementById("num2").value);
+        var oper = document.getElementById("operator").value;
+
+        if (oper === "+") {
+          document.getElementById("result").value = n1 + n2;
+        } else if (oper === "-") {
+          document.getElementById("result").value = n1 - n2;
+        } else if (oper === "/") {
+          document.getElementById("result").value = n1 / n2;
+        } else if (oper === "*") {
+          document.getElementById("result").value = n1 * n2;
+        }
+      }
+    </script>
   </body>
 </html>
