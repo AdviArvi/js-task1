@@ -1,3 +1,11 @@
 h1, h2 {
   font-family: Lato;
 }
+
+#cc { 
+        height:300px;
+        width:450px;
+        border:black grove 2px;
+        border-radius:10px;
+        border-color:black;
+      }
